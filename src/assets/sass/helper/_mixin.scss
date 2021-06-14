@@ -1,0 +1,95 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin border-radius($size) {
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    -o-border-radius: $size;
+    border-radius: $size;
+}
+
+@mixin border-radius-top($size) {
+    -webkit-border-top-left-radius: $size;
+    -moz-border-top-left-radius: $size;
+    -o-border-top-left-radius: $size;
+    -border-top-left-radius: $size;
+
+    -webkit-border-top-right-radius: $size;
+    -moz-border-top-right-radius: $size;
+    -o-border-top-right-radius: $size;
+    -border-top-right-radius: $size;
+}
+
+@mixin border-radius-bottom($size) {
+    -webkit-border-bottom-left-radius: $size;
+    -moz-border-bottom-left-radius: $size;
+    -o-border-bottom-left-radius: $size;
+    -border-bottom-left-radius: $size;
+
+    -webkit-border-bottom-right-radius: $size;
+    -moz-border-bottom-right-radius: $size;
+    -o-border-bottom-right-radius: $size;
+    -border-bottom-right-radius: $size;
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property: $duration;
+    -o-transition-property: $duration;
+    -webkit-transition-property: $duration;
+    transition-property: $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function: $timing;
+    -o-transition-timing-function: $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+// Transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// Box-shadow
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}

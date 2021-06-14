@@ -1,0 +1,39 @@
+.main-nav {
+    box-shadow: 10px 5px 9px #babaf8;
+}
+
+.main-nav {
+    @include box-shadow(10px, 5px, 9px, #babaf8, false);
+    .navbar-nav {
+        .nav-item {
+            padding-right: 32px;
+
+            &:hover {
+                .nav-link::after {
+                    content: "";
+                    width: 100%;
+                    @include transition(all ease-in-out 250ms);
+                }
+            }
+
+            .nav-link {
+                color: $white;
+                font-size: $size-1;
+                padding: 0;
+
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    background-color: $primary;
+                    height: 4px;
+                    width: 0;
+                    left: 0;
+                    top: -31px;
+                    @include transition(all ease-in-out 250ms);
+                }
+            }
+        }
+    }
+}

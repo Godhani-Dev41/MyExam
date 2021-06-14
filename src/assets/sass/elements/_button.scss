@@ -1,0 +1,39 @@
+.btn {
+    border-radius: 40px;
+    font-weight: 600;
+    padding: 8px 32px;
+    font-size: 18px;
+
+    &-white {
+        color: $secondary;
+        background-color: $white;
+    }
+
+    &-white:hover,
+    &-white-outline:hover {
+        background-color: $white;
+        color: $secondary !important;
+    }
+}
+
+@each $name, $color in $colors {
+    .btn-#{$name}-outline {
+        border: 1px solid $color;
+        color: $color;
+
+        &:hover {
+            background-color: darken($color, 8%);
+            color: $white;
+        }
+    }
+}
+
+@each $name, $color in $colors {
+    .btn-#{$name} {
+        background-color: $color;
+        border: $color;
+        &:hover {
+            background-color: darken($color, 8%);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+// regular style toast
+@import '~ngx-toastr/toastr';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "assets/sass/main.scss";
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+input,
+select {
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+}

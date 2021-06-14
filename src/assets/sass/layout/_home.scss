@@ -1,0 +1,105 @@
+header {
+    background-color: #fcfcfc;
+    // background-color: #f9f9f9;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 225px;
+    .slider {
+        display: flex;
+        align-items: flex-end;
+        min-height: 225px;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        &-text {
+            font-size: 43px;
+            font-weight: 800;
+        }
+    }
+}
+
+.intro {
+    span {
+        font-size: $size-0;
+    }
+    p {
+        font-size: $size-2;
+    }
+
+    &-a {
+        position: relative;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 20% 80%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            height: 100%;
+            top: 0;
+            border: 1px solid lighten($grey, 40%);
+            width: 0px;
+            background: lighten($grey, 40%);
+        }
+    }
+
+    &-detail,
+    &-action {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &-detail {
+        justify-content: left;
+    }
+    &-action {
+        justify-content: right;
+    }
+}
+
+.abt-img img {
+    width: 100%;
+}
+
+.dot-ul {
+    li {
+        color: $black;
+        font-size: $size-1;
+        position: relative;
+        padding-left: 42px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+
+        &::before {
+            content: url(/assets/images/Dot.png);
+            left: 6px;
+            // content: "";
+            // background-image: url(../../assets/images/Dot.png);
+            position: absolute;
+        }
+    }
+}
+
+.sub-foot {
+    background-image: url(/assets/images/bg-sub-fooot.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-title {
+        font-size: $size-7;
+    }
+
+    &-title-icon {
+        width: 56px;
+        vertical-align: bottom;
+    }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: $primary;
+}

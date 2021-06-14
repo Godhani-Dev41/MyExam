@@ -1,0 +1,25 @@
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: lighten($primary, 20%);
+
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    &:hover {
+        background: $primary;
+    }
+}
+
+.owl-carousel .owl-nav button.owl-prev.disabled {
+    background: #ffe9de;
+}
+
+.owl-nav {
+    text-align: center;
+}
